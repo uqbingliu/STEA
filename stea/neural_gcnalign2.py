@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from stea.emea_framework import NeuralEAModule
+from stea.stea_framework import NeuralEAModule
 from stea.conf import Config
 import os
 import numpy as np
@@ -8,7 +8,6 @@ import json
 import torch
 from stea.simi_to_prob import SimiToProbModule
 from stea.data import load_alignment, load_alignment_inv
-from stea.RREA.runner import Runner
 import subprocess
 from stea.RREA.CSLS_torch import Evaluator
 import itertools
@@ -32,12 +31,6 @@ class GCNAlignModule(NeuralEAModule):
             file.write("\n".join(test_lines))
 
     def train_model_with_observed_labels(self):
-        # cur_dir = os.path.dirname(os.path.abspath(__file__))
-        # script_fn = os.path.join(cur_dir, "RREA/run.py")
-        # proj_dir = os.path.abspath(cur_dir)
-        # arg_str = f"--data_dir={self.conf.data_dir} --output_dir={self.conf.output_dir}"
-        # cmd_line = f"/home/uqbliu3/anaconda3/envs/al4ea/bin/python {script_fn} {arg_str}"
-        # os.system(cmd_line)
 
         cmd_fn = self.conf.py_exe_fn
         cur_dir = os.path.dirname(os.path.realpath(__file__))

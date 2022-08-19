@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 
-from stea.emea_framework import NeuralEAModule
+from stea.stea_framework import NeuralEAModule
 from stea.conf import Config
 import os
 import subprocess

@@ -9,8 +9,8 @@ import argparse
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('--data_dir',default='F:\\EA\\emea\\formatted_rrea\\zh_en', type=str)
-    parser.add_argument('--data_name',default='zh_en', type=str)
+    parser.add_argument('--data_dir', type=str)
+    parser.add_argument('--data_name', type=str)
     parser.add_argument('--train_percent',default=0.3, type=float)
     parser.add_argument('--for_openea', action='store_true', default=False)
     args = parser.parse_args()

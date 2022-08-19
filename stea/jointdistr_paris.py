@@ -12,7 +12,7 @@ import os
 import numpy as np
 from tqdm import trange, tqdm
 from torch.utils.data import DataLoader, Dataset
-from stea.emea_framework import JointDistrModule
+from stea.stea_framework import JointDistrModule
 
 
 class EMAlignLabelDataset(Dataset):

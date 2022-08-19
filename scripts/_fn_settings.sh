@@ -4,7 +4,7 @@
 
 
 dataset_root_dir="${proj_dir}/datasets/"
-output_root_dir="${proj_dir}/output/emea/"
+output_root_dir="${proj_dir}/output/stea/"
 
 data_dir="${dataset_root_dir}/cache/${data_name}/${task}/"
 output_dir="${output_root_dir}/${data_name}/${task}"
