@@ -21,6 +21,7 @@ class Simi2ProbModel(nn.Module):
     def forward(self, simi_mtx: torch.Tensor, max_simi_arr: torch.Tensor):  # N, cate_num, fea_dim
         offset = max_simi_arr.unsqueeze(dim=1) - simi_mtx
         features = torch.stack([simi_mtx, offset], dim=-1)
+        # features = torch.stack([simi_mtx], dim=-1)
         logits = self.linear(features) / self.crx_ent_tau
         logits = torch.squeeze(logits)
         return logits

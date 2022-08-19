@@ -98,11 +98,11 @@ class STEAFramework:
 
             if self.joint_distri_model is not None:
                 self._update_jointdistr_output_dir(ite)
-                print("train joint distri")
-                self.joint_distri_model.train_model()
-                if self.joint_distri_model_inv is not None:
-                    print("train inverse joint distri")
-                    self.joint_distri_model_inv.train_model()
+                # print("train joint distri")
+                # self.joint_distri_model.train_model()
+                # if self.joint_distri_model_inv is not None:
+                #     print("train inverse joint distri")
+                #     self.joint_distri_model_inv.train_model()
 
             # # E step
             print("===>> Perform E Step <<===")

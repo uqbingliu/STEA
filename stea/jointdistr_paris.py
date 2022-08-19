@@ -57,9 +57,9 @@ class ParisJointDistri(nn.Module, JointDistrModule):
         self.paris_model = ParisModel(paris_data, conf=conf, inv=inv)
 
         self.feature_num = 1
-        self.linear_layer = nn.Linear(in_features=self.feature_num, out_features=1, bias=True)
-        torch.nn.init.ones_(self.linear_layer.weight)
-        torch.nn.init.zeros_(self.linear_layer.bias)
+        # self.linear_layer = nn.Linear(in_features=self.feature_num, out_features=1, bias=True)
+        # torch.nn.init.ones_(self.linear_layer.weight)
+        # torch.nn.init.zeros_(self.linear_layer.bias)
 
         self.candidates = None
         self.neural_prob_mtx = None
@@ -98,7 +98,8 @@ class ParisJointDistri(nn.Module, JointDistrModule):
 
     def local_func(self, features: torch.Tensor):
         features = features.to(dtype=torch.float32, device=self.second_device)
-        candi_score_mtx = torch.exp(self.linear_layer(features))
+        # candi_score_mtx = torch.exp(self.linear_layer(features))
+        candi_score_mtx = torch.exp(features)
         fea_shape = candi_score_mtx.shape
         candi_score_mtx = candi_score_mtx.reshape(shape=fea_shape[:2])
         return candi_score_mtx
