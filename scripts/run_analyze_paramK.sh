@@ -22,14 +22,14 @@ joint_distr_thr=0
 neural_mn=False
 joint_distr_mn=True
 
+data_name = "zh_en"
 
-#for data_name in "zh_en" "ja_en" "fr_en"
-for data_name in "zh_en"
+for topK in 2 3 4 5 10 15 20 25
 do
 #  for train_percent in 0.01 0.05 0.1 0.2 0.3
   for train_percent in 0.01
   do
-    task="stea_dual_amn_${train_percent}_seed${seed}"
+    task="paramK_${topK}_dual_amn_${train_percent}_seed${seed}"
 
     . $script_dir/_fn_settings.sh
 
