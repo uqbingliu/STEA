@@ -5,6 +5,8 @@ This repo contains the source code of paper "Dependency-aware Self-training for 
 Download the used data from this [Dropbox directory](https://www.dropbox.com/sh/8agq4ta2sjtpdhn/AADnIPM-OQKxe6NtF-G9tG3Ua?dl=0).
 Decompress it and put it under `STEA_code/` as shown in the folder structure below.
 
+:pushpin: The code has been tested. Feel free to create [issues](https://github.com/uqbingliu/STEA/issues) if you cannot run it successfully. Thanks!
+
 ## Structure of Folders
 ```shell
 STEA_code/
