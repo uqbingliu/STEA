@@ -1,6 +1,9 @@
 # STEA
 
-This repo contains the source code and used data of paper "Dependency-aware Self-training for Entity Alignment", which is under review of WSDM 2022.
+This repo contains the source code of paper "Dependency-aware Self-training for Entity Alignment", which has been accepted at WSDM 2023.
+
+Download the used data from this [Dropbox directory](https://www.dropbox.com/sh/8agq4ta2sjtpdhn/AADnIPM-OQKxe6NtF-G9tG3Ua?dl=0).
+Decompress it and put it under `STEA_code/` as shown in the folder structure below.
 
 ## Structure of Folders
 ```shell
@@ -57,7 +60,7 @@ For each task, the evaluation results as well as some other outputs can be found
 Note: AliNet runs much slower than the other EA models. So you can explore the self-training methods with the other EA models first.
 
 ## You Want to Report Issues?
-We are willing to hear from you 
+We are willing to hear from you
 if you have any problem in running our code, or find inconsistency between your running results and what reported in the paper.
 
 ## Acknowledgement
